@@ -10,10 +10,11 @@ Modern, bilingual website for storage unit rental in Ibiza with real-time availa
 
 - 🌐 **Bilingual**: Full support for Spanish and English
 - 📱 **Responsive**: Mobile-first design with smooth animations
-- ⚡ **Real-time Availability**: Integrated Storagefy widget for instant bookings
+- ⚡ **Real-time Availability**: Dedicated booking page with Storagefy widget
 - 🎨 **Modern UI**: Clean, professional design with Tailwind CSS
 - 🔒 **Type-safe**: Built with TypeScript
 - 🚀 **Performance**: Optimized with Next.js 15 App Router
+- 📄 **Multi-page**: Landing page + dedicated booking page
 
 ## 🛠️ Tech Stack
 
@@ -54,27 +55,32 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 trasteros-ibiza/
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx          # Root layout
-│   │   ├── page.tsx            # Home page
-│   │   └── globals.css         # Global styles
+│   │   ├── layout.tsx             # Root layout
+│   │   ├── page.tsx               # Home page (landing)
+│   │   ├── globals.css            # Global styles
+│   │   └── disponibilidad/        # Availability booking page
+│   │       ├── layout.tsx         # Booking page layout
+│   │       └── page.tsx           # Booking page with widget
 │   ├── components/
-│   │   ├── Header.tsx          # Navigation bar
-│   │   ├── Hero.tsx            # Hero section
-│   │   ├── Services.tsx        # Services section
-│   │   ├── Locations.tsx       # Locations section
-│   │   ├── Pricing.tsx         # Pricing plans
-│   │   ├── StorageWidget.tsx   # Storagefy integration
-│   │   ├── FAQs.tsx            # FAQ section
-│   │   ├── Contact.tsx         # Contact form
-│   │   ├── Footer.tsx          # Footer
-│   │   ├── ui/                 # Reusable UI components
-│   │   └── icons/              # Custom SVG icons
+│   │   ├── Header.tsx             # Navigation bar
+│   │   ├── Hero.tsx               # Hero section
+│   │   ├── Services.tsx           # Services section
+│   │   ├── Locations.tsx          # Locations section
+│   │   ├── Pricing.tsx            # Pricing plans
+│   │   ├── WhyUs.tsx              # Why choose us section
+│   │   ├── Stats.tsx              # Statistics section
+│   │   ├── FAQs.tsx               # FAQ section
+│   │   ├── CTA.tsx                # Call to action section
+│   │   ├── Contact.tsx            # Contact form
+│   │   ├── Footer.tsx             # Footer
+│   │   ├── ui/                    # Reusable UI components
+│   │   └── icons/                 # Custom SVG icons
 │   ├── hooks/
-│   │   └── useLanguage.ts      # Language management hook
+│   │   └── useLanguage.ts         # Language management hook
 │   └── lib/
-│       └── translations.ts     # i18n translations
+│       └── translations.ts        # i18n translations
 └── public/
-    └── brand/                  # Brand assets (logos, images)
+    └── brand/                     # Brand assets (logos, images)
 ```
 
 ## 🌍 Internationalization
