@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏠 Trasteros Ibiza
 
-## Getting Started
+Modern, bilingual website for storage unit rental in Ibiza with real-time availability and online booking.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.5-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)](https://tailwindcss.com/)
+
+## ✨ Features
+
+- 🌐 **Bilingual**: Full support for Spanish and English
+- 📱 **Responsive**: Mobile-first design with smooth animations
+- ⚡ **Real-time Availability**: Integrated Storagefy widget for instant bookings
+- 🎨 **Modern UI**: Clean, professional design with Tailwind CSS
+- 🔒 **Type-safe**: Built with TypeScript
+- 🚀 **Performance**: Optimized with Next.js 15 App Router
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Fonts**: [Inter](https://fonts.google.com/specimen/Inter)
+- **Booking Widget**: [Storagefy](https://www.storagefy.app/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Andres-Giannico/trasteros-ibiza.git
+
+# Navigate to the project
+cd trasteros-ibiza
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+trasteros-ibiza/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx          # Root layout
+│   │   ├── page.tsx            # Home page
+│   │   └── globals.css         # Global styles
+│   ├── components/
+│   │   ├── Header.tsx          # Navigation bar
+│   │   ├── Hero.tsx            # Hero section
+│   │   ├── Services.tsx        # Services section
+│   │   ├── Locations.tsx       # Locations section
+│   │   ├── Pricing.tsx         # Pricing plans
+│   │   ├── StorageWidget.tsx   # Storagefy integration
+│   │   ├── FAQs.tsx            # FAQ section
+│   │   ├── Contact.tsx         # Contact form
+│   │   ├── Footer.tsx          # Footer
+│   │   ├── ui/                 # Reusable UI components
+│   │   └── icons/              # Custom SVG icons
+│   ├── hooks/
+│   │   └── useLanguage.ts      # Language management hook
+│   └── lib/
+│       └── translations.ts     # i18n translations
+└── public/
+    └── brand/                  # Brand assets (logos, images)
+```
 
-## Learn More
+## 🌍 Internationalization
 
-To learn more about Next.js, take a look at the following resources:
+The website supports Spanish (default) and English. Language preferences are saved in localStorage.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To add translations, edit `src/lib/translations.ts`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+export const translations = {
+  es: { /* Spanish translations */ },
+  en: { /* English translations */ }
+};
+```
 
-## Deploy on Vercel
+## 🎨 Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Colors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Brand colors are defined in `src/app/globals.css`:
+
+```css
+:root {
+  --brand: #ff6a00;  /* Primary orange */
+  --brand-50: #fff7ed;
+  --brand-500: #ff6a00;
+  --brand-600: #ea580c;
+  /* ... */
+}
+```
+
+### Storagefy Widget Token
+
+Update the widget token in `src/components/StorageWidget.tsx`:
+
+```tsx
+data-token="YOUR_STORAGEFY_TOKEN_HERE"
+```
+
+## 📦 Build for Production
+
+```bash
+# Create production build
+npm run build
+
+# Start production server
+npm start
+```
+
+## 🚀 Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Andres-Giannico/trasteros-ibiza)
+
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com/)
+3. Vercel will auto-detect Next.js and deploy
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 👨‍💻 Author
+
+**Andres Giannico**
+- GitHub: [@Andres-Giannico](https://github.com/Andres-Giannico)
+
+---
+
+Built with ❤️ in Ibiza

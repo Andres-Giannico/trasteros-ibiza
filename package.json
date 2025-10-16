@@ -1,10 +1,12 @@
 {
-  "name": "tiweb",
-  "version": "0.1.0",
+  "name": "trasteros-ibiza",
+  "version": "1.0.0",
+  "description": "Modern storage unit rental website for Trasteros Ibiza with real-time availability",
+  "author": "Andres Giannico",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
