@@ -3,10 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const { language, changeLanguage, t } = useLanguage();
 
   return (
@@ -49,11 +52,25 @@ export default function Header() {
           </button>
           
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <a href="#servicios" className="hover:text-black text-neutral-700">{t.header.menu.services}</a>
-            <a href="#ubicaciones" className="hover:text-black text-neutral-700">{t.header.menu.locations}</a>
-            <a href="#precios" className="hover:text-black text-neutral-700">{t.header.menu.pricing}</a>
-            <a href="#disponibilidad" className="hover:text-black text-neutral-700">{t.header.menu.availability}</a>
-            <a href="#contacto" className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90">{t.header.cta}</a>
+            {isHome ? (
+              <>
+                <a href="#servicios" className="hover:text-black text-neutral-700">{t.header.menu.services}</a>
+                <a href="#ubicaciones" className="hover:text-black text-neutral-700">{t.header.menu.locations}</a>
+                <a href="#precios" className="hover:text-black text-neutral-700">{t.header.menu.pricing}</a>
+              </>
+            ) : (
+              <>
+                <Link href="/#servicios" className="hover:text-black text-neutral-700">{t.header.menu.services}</Link>
+                <Link href="/#ubicaciones" className="hover:text-black text-neutral-700">{t.header.menu.locations}</Link>
+                <Link href="/#precios" className="hover:text-black text-neutral-700">{t.header.menu.pricing}</Link>
+              </>
+            )}
+            <Link href="/disponibilidad" className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
+            {isHome ? (
+              <a href="#contacto" className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90">{t.header.cta}</a>
+            ) : (
+              <Link href="/#contacto" className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90">{t.header.cta}</Link>
+            )}
           </nav>
         </div>
       </div>
@@ -86,11 +103,25 @@ export default function Header() {
               </button>
             </div>
             
-            <a href="#servicios" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.services}</a>
-            <a href="#ubicaciones" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.locations}</a>
-            <a href="#precios" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.pricing}</a>
-            <a href="#disponibilidad" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.availability}</a>
-            <a href="#contacto" onClick={() => setOpen(false)} className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90 w-max">{t.header.cta}</a>
+            {isHome ? (
+              <>
+                <a href="#servicios" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.services}</a>
+                <a href="#ubicaciones" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.locations}</a>
+                <a href="#precios" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.pricing}</a>
+              </>
+            ) : (
+              <>
+                <Link href="/#servicios" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.services}</Link>
+                <Link href="/#ubicaciones" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.locations}</Link>
+                <Link href="/#precios" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.pricing}</Link>
+              </>
+            )}
+            <Link href="/disponibilidad" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
+            {isHome ? (
+              <a href="#contacto" onClick={() => setOpen(false)} className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90 w-max">{t.header.cta}</a>
+            ) : (
+              <Link href="/#contacto" onClick={() => setOpen(false)} className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90 w-max">{t.header.cta}</Link>
+            )}
           </div>
         </div>
       )}

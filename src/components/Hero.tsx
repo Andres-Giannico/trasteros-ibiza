@@ -25,7 +25,7 @@ export default function Hero() {
               {t.hero.description}
             </p>
             <div className="mt-8 flex flex-wrap gap-3 items-center">
-              <Button href="#precios" className="shadow-lg">
+              <Button href="/disponibilidad" className="shadow-lg">
                 <span>{t.hero.ctaPrimary}</span>
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14m-7-7 7 7-7 7" />

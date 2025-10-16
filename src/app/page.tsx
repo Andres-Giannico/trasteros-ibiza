@@ -9,7 +9,6 @@ import Stats from "@/components/Stats";
 import WhyUs from "@/components/WhyUs";
 import FAQs from "@/components/FAQs";
 import CTA from "@/components/CTA";
-import StorageWidget from "@/components/StorageWidget";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <Services />
       <Locations />
       <Pricing />
-      <StorageWidget />
       <FAQs />
       <CTA />
       <Contact />
