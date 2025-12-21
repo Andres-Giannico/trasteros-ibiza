@@ -15,11 +15,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/10">
       <div className="glass">
-        <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <Link href="#hero" className="flex items-center gap-3">
             <Image src="/brand/logo-squirrel.png" alt={t.header.companyName} width={50} height={50} className="rounded" />
             <span className="font-bold text-xl text-gray-900">{t.header.companyName}</span>
-          </Link>
+        </Link>
           
           {/* Language Switcher */}
           <div className="hidden sm:flex items-center gap-2 mr-6">
@@ -51,7 +51,7 @@ export default function Header() {
             </svg>
           </button>
           
-          <nav className="hidden sm:flex items-center gap-6 text-sm">
+        <nav className="hidden sm:flex items-center gap-6 text-sm">
             {isHome ? (
               <>
                 <a href="#servicios" className="hover:text-black text-neutral-700">{t.header.menu.services}</a>
@@ -66,12 +66,8 @@ export default function Header() {
               </>
             )}
             <Link href="/disponibilidad" className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
-            {isHome ? (
-              <a href="#contacto" className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90">{t.header.cta}</a>
-            ) : (
-              <Link href="/#contacto" className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90">{t.header.cta}</Link>
-            )}
-          </nav>
+            <Link href="/#contacto" className="hover:text-black text-neutral-700">{t.header.menu.contact}</Link>
+        </nav>
         </div>
       </div>
       
@@ -118,9 +114,9 @@ export default function Header() {
             )}
             <Link href="/disponibilidad" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
             {isHome ? (
-              <a href="#contacto" onClick={() => setOpen(false)} className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90 w-max">{t.header.cta}</a>
+              <a href="#contacto" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.contact}</a>
             ) : (
-              <Link href="/#contacto" onClick={() => setOpen(false)} className="px-4 py-2 rounded-md bg-[--color-brand] text-white font-medium hover:opacity-90 w-max">{t.header.cta}</Link>
+              <Link href="/#contacto" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.contact}</Link>
             )}
           </div>
         </div>

@@ -7,9 +7,9 @@ export default function Button({ variant = "primary", className, ...props }: Pro
   const base =
     "inline-flex items-center justify-center rounded-lg text-sm font-semibold transition-transform active:scale-[.98] gap-2";
   const variants = {
-    primary: "bg-[--color-brand] text-white hover:opacity-90 shadow-sm",
-    outline: "border border-black/10 hover:bg-black/5",
-    ghost: "hover:bg-black/5",
+    primary: "bg-orange-500 text-white hover:bg-orange-600 shadow-sm",
+    outline: "border border-gray-300 text-gray-700 hover:bg-gray-50",
+    ghost: "text-gray-700 hover:bg-gray-100",
   } as const;
 
   const classes = `${base} px-6 py-3 ${variants[variant]} ${className || ""}`;

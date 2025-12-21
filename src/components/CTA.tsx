@@ -18,7 +18,7 @@ export default function CTA() {
             {t.cta.description}
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button href="/disponibilidad" className="bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-lg hover:shadow-xl text-white border-0">
+            <Button href="/disponibilidad" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-lg hover:shadow-xl text-white border-0">
               {t.cta.ctaPrimary}
             </Button>
             <Button href="#contacto" variant="ghost" className="text-white hover:bg-white/10 border border-white/20 hover:border-white/40">

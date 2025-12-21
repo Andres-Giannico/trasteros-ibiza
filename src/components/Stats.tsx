@@ -7,9 +7,9 @@ export default function Stats() {
   const { t } = useLanguage();
 
   const items = [
-    { label: t.stats.clients, value: "1.200+" },
-    { label: t.stats.spaces, value: "8.000 m²" },
-    { label: t.stats.years, value: "5+" },
+    { label: t.stats.clients, value: "200+" },
+    { label: t.stats.spaces, value: "500+ m²" },
+    { label: t.stats.years, value: "8" },
     { label: t.stats.satisfaction, value: "4.9/5" },
   ];
   return (
