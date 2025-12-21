@@ -251,7 +251,7 @@ export const translations: Record<Language, Translations> = {
       title: "Nuestras ubicaciones",
       description: "Encuentra el trastero perfecto cerca de ti",
       viewOnMap: "Ver en Google Maps",
-      googleMapsUrl: "https://maps.app.goo.gl/bwSDeYOryJMNlzZ3P",
+      googleMapsUrl: "https://maps.app.goo.gl/bwSDeYOryJMNlzZ3P?_imcp=1",
       items: [
         {
           name: "Sant Antoni de Portmany",
@@ -480,7 +480,7 @@ export const translations: Record<Language, Translations> = {
       title: "Our locations",
       description: "Find the perfect storage unit near you",
       viewOnMap: "View on Google Maps",
-      googleMapsUrl: "https://maps.app.goo.gl/bwSDeYOryJMNlzZ3P",
+      googleMapsUrl: "https://maps.app.goo.gl/bwSDeYOryJMNlzZ3P?_imcp=1",
       items: [
         {
           name: "Sant Antoni de Portmany",
