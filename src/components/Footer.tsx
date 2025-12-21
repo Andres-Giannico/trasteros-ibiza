@@ -13,23 +13,9 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="font-bold text-gray-900 mb-4">Trasteros Ibiza</h3>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-600">
               {t.footer.description || "Tu espacio extra, simple y al instante."}
             </p>
-            <div className="flex gap-3">
-              {/* Redes sociales - puedes agregar los links reales cuando los tengas */}
-              <a 
-                href="https://maps.app.goo.gl/bwSDeYOryJMNlzZ3P?_imcp=1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-gray-200 hover:bg-orange-500 hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Google Maps"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
