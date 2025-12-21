@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex gap-3">
               {/* Redes sociales - puedes agregar los links reales cuando los tengas */}
               <a 
-                href="https://maps.app.goo.gl/jBuhEOni5pZfs5pAA" 
+                href="https://maps.app.goo.gl/bwSDeYOryJMNlzZ3P" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-gray-200 hover:bg-orange-500 hover:text-white flex items-center justify-center transition-colors"
