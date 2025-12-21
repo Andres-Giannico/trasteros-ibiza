@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
           <p>{t.footer.copyright}</p>
-          <p className="text-xs">Made with ❤️ in Ibiza</p>
+          <p className="text-xs">Made with ❤️ in Ibiza by Pinchetron</p>
         </div>
       </div>
     </footer>
