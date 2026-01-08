@@ -66,6 +66,14 @@ export default function Header() {
               </>
             )}
             <Link href="/disponibilidad" className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
+            <a 
+              href="https://clientes.storagefy.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-black text-neutral-700 font-medium text-orange-600"
+            >
+              {t.header.menu.clientArea}
+            </a>
             <Link href="/#contacto" className="hover:text-black text-neutral-700">{t.header.menu.contact}</Link>
         </nav>
         </div>
@@ -113,6 +121,15 @@ export default function Header() {
               </>
             )}
             <Link href="/disponibilidad" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
+            <a 
+              href="https://clientes.storagefy.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="hover:text-black text-neutral-700 font-medium text-orange-600"
+            >
+              {t.header.menu.clientArea}
+            </a>
             {isHome ? (
               <a href="#contacto" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700">{t.header.menu.contact}</a>
             ) : (

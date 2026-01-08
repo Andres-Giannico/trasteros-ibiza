@@ -10,6 +10,7 @@ export interface Translations {
       pricing: string;
       availability: string;
       contact: string;
+      clientArea: string;
     };
     cta: string;
   };
@@ -215,6 +216,7 @@ export const translations: Record<Language, Translations> = {
         pricing: "Precios",
         availability: "Disponibilidad",
         contact: "Contacto",
+        clientArea: "Área Cliente",
       },
       cta: "Reservar ahora",
     },
@@ -464,6 +466,7 @@ export const translations: Record<Language, Translations> = {
         pricing: "Pricing",
         availability: "Availability",
         contact: "Contact",
+        clientArea: "Client Area",
       },
       cta: "Book now",
     },
