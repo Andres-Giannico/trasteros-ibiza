@@ -146,6 +146,28 @@ export interface Translations {
     };
   };
   
+  // Client Area
+  clientArea: {
+    badge: string;
+    title: string;
+    description: string;
+    cta: string;
+    features: {
+      doorControl: {
+        title: string;
+        description: string;
+      };
+      invoices: {
+        title: string;
+        description: string;
+      };
+      secure: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+  
   // Contact
   contact: {
     title: string;
@@ -341,6 +363,26 @@ export const translations: Record<Language, Translations> = {
         dedicated: {
           title: "Atención Dedicada",
           description: "Como grupo de amigos, podemos dedicarte el tiempo que necesites. Tu satisfacción es nuestra prioridad.",
+        },
+      },
+    },
+    clientArea: {
+      badge: "Tecnología Avanzada",
+      title: "Área de Cliente Digital",
+      description: "Gestiona tu trastero desde cualquier dispositivo. Abre la puerta desde tu móvil, consulta facturas, realiza pagos y mucho más, todo desde tu área de cliente personal.",
+      cta: "Acceder al Área de Cliente",
+      features: {
+        doorControl: {
+          title: "Control de Puertas Remoto",
+          description: "Abre la puerta de tu trastero directamente desde tu móvil. Acceso digital durante el horario establecido (normalmente 06:00 a 22:00). Sin necesidad de llaves físicas.",
+        },
+        invoices: {
+          title: "Gestión de Facturas y Pagos",
+          description: "Consulta y descarga tus facturas al instante. Realiza seguimiento de tus pagos en tiempo real y accede a tu historial completo de transacciones.",
+        },
+        secure: {
+          title: "Seguridad y Control",
+          description: "Acceso autenticado y registrado. El sistema valida automáticamente el horario antes de permitir abrir la puerta. Máxima seguridad en cada acceso.",
         },
       },
     },
@@ -570,6 +612,26 @@ export const translations: Record<Language, Translations> = {
         dedicated: {
           title: "Dedicated Attention",
           description: "As a group of friends, we can give you the time you need. Your satisfaction is our priority.",
+        },
+      },
+    },
+    clientArea: {
+      badge: "Advanced Technology",
+      title: "Digital Customer Portal",
+      description: "Manage your storage unit from any device. Open the door from your mobile, check invoices, make payments and much more, all from your personal customer area.",
+      cta: "Access Customer Portal",
+      features: {
+        doorControl: {
+          title: "Remote Door Control",
+          description: "Open your storage unit door directly from your mobile. Digital access during established hours (normally 06:00 to 22:00). No need for physical keys.",
+        },
+        invoices: {
+          title: "Invoice and Payment Management",
+          description: "Check and download your invoices instantly. Track your payments in real time and access your complete transaction history.",
+        },
+        secure: {
+          title: "Security and Control",
+          description: "Authenticated and logged access. The system automatically validates the schedule before allowing the door to open. Maximum security on every access.",
         },
       },
     },

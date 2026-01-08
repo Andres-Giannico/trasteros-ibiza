@@ -12,6 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import TrustBadges from "@/components/TrustBadges";
 import FAQs from "@/components/FAQs";
 import CTA from "@/components/CTA";
+import ClientArea from "@/components/ClientArea";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <PersonalizedService />
       <Testimonials />
       <Services />
+      <ClientArea />
       <Locations />
       <Pricing />
       <FAQs />
