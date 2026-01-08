@@ -15,7 +15,7 @@ export default function PersonalizedService() {
           <div className="order-2 lg:order-1 will-animate">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/imagen/stefano.png"
+                src="/imagen/stefano-caja.webp"
                 alt={t.personalizedService.imageAlt}
                 width={600}
                 height={800}

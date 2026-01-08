@@ -69,7 +69,7 @@ export default function Contact() {
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="text-xl">✉️</span>
-                    <a href="mailto:trasterosibiza@gmail.com" className="hover:text-orange-500 transition-colors">{t.contact.info.email}</a>
+                    <a href="mailto:ibizatrasteros@gmail.com" className="hover:text-orange-500 transition-colors">{t.contact.info.email}</a>
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="text-xl">🕒</span>

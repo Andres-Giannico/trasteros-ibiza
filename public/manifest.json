@@ -1,0 +1,22 @@
+{
+  "name": "Trasteros Ibiza",
+  "short_name": "Trasteros Ibiza",
+  "description": "Alquila trasteros en Ibiza desde 55€/mes. Acceso 7/7, sin permanencia, seguridad total.",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ea580c",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
+

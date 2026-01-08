@@ -35,7 +35,7 @@ Enviado desde el formulario de contacto de Trasteros Ibiza
     // Por ejemplo, usando Resend:
     // await resend.emails.send({
     //   from: 'contacto@trasterosibiza.com',
-    //   to: 'trasterosibiza@gmail.com',
+    //   to: 'ibizatrasteros@gmail.com',
     //   subject: `Nuevo contacto: ${name}`,
     //   text: emailContent,
     // });
@@ -43,7 +43,7 @@ Enviado desde el formulario de contacto de Trasteros Ibiza
     // Por ahora, retornamos éxito
     // En producción, implementa el envío real de email
     console.log('Email que se enviaría:', {
-      to: 'trasterosibiza@gmail.com',
+      to: 'ibizatrasteros@gmail.com',
       subject: `Nuevo contacto: ${name}`,
       text: emailContent,
     });

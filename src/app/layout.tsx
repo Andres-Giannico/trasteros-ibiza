@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -38,9 +39,15 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "es_ES",
@@ -107,7 +114,7 @@ export default function RootLayout({
     },
     "url": "https://trasterosibiza.com",
     "telephone": "+34675330148",
-    "email": "trasterosibiza@gmail.com",
+    "email": "ibizatrasteros@gmail.com",
     "priceRange": "€€",
     "openingHoursSpecification": [
       {
@@ -121,8 +128,8 @@ export default function RootLayout({
           "Saturday",
           "Sunday"
         ],
-        "opens": "09:00",
-        "closes": "21:00"
+        "opens": "06:00",
+        "closes": "23:30"
       }
     ],
     "areaServed": {
@@ -164,6 +171,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

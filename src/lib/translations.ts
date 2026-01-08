@@ -203,7 +203,7 @@ export const translations: Record<Language, Translations> = {
       description: "Almacenamiento seguro en Ibiza desde 55€/mes. Reserva online en 2 minutos y accede 7 días a la semana. Sin permanencia, sin sorpresas.",
       ctaPrimary: "Ver disponibilidad",
       ctaSecondary: "Hablar con un experto",
-      features: "✓ Sin permanencia ✓ Acceso 7/7 ✓ Seguro incluido",
+      features: "✓ Sin permanencia ✓ Acceso 7/7 (06:00-23:30) ✓ Seguro incluido ✓ IVA incluido",
     },
     stats: {
       clients: "Clientes satisfechos",
@@ -235,7 +235,7 @@ export const translations: Record<Language, Translations> = {
       items: [
         {
           title: "Acceso 7/7",
-          description: "Accede a tu trastero los 7 días de la semana, sin restricciones.",
+          description: "Accede a tu trastero los 7 días de la semana de 06:00 a 23:30, sin restricciones.",
         },
         {
           title: "Seguridad total",
@@ -256,12 +256,12 @@ export const translations: Record<Language, Translations> = {
         {
           name: "Sant Antoni de Portmany",
           address: "Calle Menendes Pidal 28, Sant Antoni de Portmany 07820",
-          features: ["Carga descarga", "Dentro del Pueblo de San Antonio", "Acceso 7/7", "Alarma", "Camaras de Seguridad"],
+          features: ["Carga descarga", "Dentro del Pueblo de San Antonio", "Acceso 7/7 (06:00-23:30)", "Alarma", "Camaras de Seguridad"],
         },
         {
           name: "Ses Paisses",
           address: "Carrer Rosers 7, Ses Paisses 07820",
-          features: ["Carga descarga", "A las afueras del Pueblo de San Antonio", "Acceso 7/7", "Alarma", "Camaras de Seguridad"],
+          features: ["Carga descarga", "A las afueras del Pueblo de San Antonio", "Acceso 7/7 (06:00-23:30)", "Alarma", "Camaras de Seguridad"],
         },
       ],
     },
@@ -273,7 +273,7 @@ export const translations: Record<Language, Translations> = {
           name: "Según tamaños",
           price: "Desde 55€",
           period: "/mes",
-          features: ["Acceso 7/7", "Seguridad y videovigilancia", "Alarma", "Carga y descarga", "Contratos flexibles"],
+          features: ["Acceso 7/7 (06:00-23:30)", "Seguridad y videovigilancia", "Alarma", "Carga y descarga", "Contratos flexibles", "IVA incluido"],
         },
       ],
       cta: "Ver disponibilidad",
@@ -294,15 +294,15 @@ export const translations: Record<Language, Translations> = {
         },
         {
           question: "¿Qué incluye el precio?",
-          answer: "El precio incluye el alquiler del espacio, acceso 7/7, sistema de seguridad, videovigilancia y mantenimiento. No hay costes ocultos.",
+          answer: "El precio incluye el alquiler del espacio, acceso 7/7 de 06:00 a 23:30, sistema de seguridad, videovigilancia, mantenimiento e IVA. No hay costes ocultos.",
         },
         {
           question: "¿Puedo acceder a mi trastero en cualquier momento?",
-          answer: "Sí, nuestros trasteros están disponibles los 7 días de la semana. Tienes acceso completo con tu llave personal durante el horario de apertura.",
+          answer: "Sí, nuestros trasteros están disponibles los 7 días de la semana de 06:00 a 23:30. Tienes acceso completo con tu llave personal durante este horario.",
         },
         {
           question: "¿Qué pasa si necesito cancelar mi contrato?",
-          answer: "Nuestros contratos son flexibles. Puedes cancelar con un preaviso de 30 días sin penalizaciones.",
+          answer: "Nuestros contratos son flexibles. Puedes cancelar con un preaviso de 7 días sin penalizaciones.",
         },
         {
           question: "¿Qué tamaño de trastero necesito?",
@@ -310,7 +310,7 @@ export const translations: Record<Language, Translations> = {
         },
         {
           question: "¿Puedo cambiar de tamaño después?",
-          answer: "Sí, nuestros contratos son flexibles. Si necesitas más o menos espacio, puedes cambiar de tamaño con un preaviso de 30 días.",
+          answer: "Sí, nuestros contratos son flexibles. Si necesitas más o menos espacio, puedes cambiar de tamaño sin preaviso. Hacemos el balance sobre el mes en curso.",
         },
         {
           question: "¿Qué no puedo almacenar?",
@@ -394,8 +394,8 @@ export const translations: Record<Language, Translations> = {
         title: "Información de contacto",
         address: "Carrer Rosers 7, Ses Paisses",
         phone: "+34 675 330 148",
-        email: "trasterosibiza@gmail.com",
-        hours: "Lunes a Domingo: 9:00 - 21:00",
+        email: "ibizatrasteros@gmail.com",
+        hours: "Lunes a Domingo: 06:00 - 23:30",
       },
     },
     footer: {
@@ -432,7 +432,7 @@ export const translations: Record<Language, Translations> = {
       description: "Secure storage in Ibiza from 55€/month. Book online in 2 minutes and access 7 days a week. No commitment, no surprises.",
       ctaPrimary: "Check availability",
       ctaSecondary: "Talk to an expert",
-      features: "✓ No commitment ✓ 7/7 access ✓ Insurance included",
+      features: "✓ No commitment ✓ 7/7 access (06:00-23:30) ✓ Insurance included ✓ VAT included",
     },
     stats: {
       clients: "Satisfied customers",
@@ -464,7 +464,7 @@ export const translations: Record<Language, Translations> = {
       items: [
         {
           title: "7/7 access",
-          description: "Access your storage unit 7 days a week, no restrictions.",
+          description: "Access your storage unit 7 days a week from 06:00 to 23:30, no restrictions.",
         },
         {
           title: "Total security",
@@ -485,12 +485,12 @@ export const translations: Record<Language, Translations> = {
         {
           name: "Sant Antoni de Portmany",
           address: "Calle Menendes Pidal 28, Sant Antoni de Portmany 07820",
-          features: ["Loading and unloading", "Inside San Antonio Town", "7/7 Access", "Alarm", "Security Cameras"],
+          features: ["Loading and unloading", "Inside San Antonio Town", "7/7 Access (06:00-23:30)", "Alarm", "Security Cameras"],
         },
         {
           name: "Ses Paisses",
           address: "Carrer Rosers 7, Ses Paisses 07820",
-          features: ["Loading and unloading", "Outside San Antonio Town", "7/7 Access", "Alarm", "Security Cameras"],
+          features: ["Loading and unloading", "Outside San Antonio Town", "7/7 Access (06:00-23:30)", "Alarm", "Security Cameras"],
         },
       ],
     },
@@ -502,7 +502,7 @@ export const translations: Record<Language, Translations> = {
           name: "By size",
           price: "From 55€",
           period: "/month",
-          features: ["7/7 Access", "Security and video surveillance", "Alarm", "Loading and unloading", "Flexible contracts"],
+          features: ["7/7 Access (06:00-23:30)", "Security and video surveillance", "Alarm", "Loading and unloading", "Flexible contracts", "VAT included"],
         },
       ],
       cta: "Check availability",
@@ -523,15 +523,15 @@ export const translations: Record<Language, Translations> = {
         },
         {
           question: "What does the price include?",
-          answer: "The price includes space rental, 7/7 access, security system, video surveillance and maintenance. There are no hidden costs.",
+          answer: "The price includes space rental, 7/7 access from 06:00 to 23:30, security system, video surveillance, maintenance and VAT. There are no hidden costs.",
         },
         {
           question: "Can I access my storage unit at any time?",
-          answer: "Yes, our storage units are available 7 days a week. You have full access with your personal key during opening hours.",
+          answer: "Yes, our storage units are available 7 days a week from 06:00 to 23:30. You have full access with your personal key during these hours.",
         },
         {
           question: "What happens if I need to cancel my contract?",
-          answer: "Our contracts are flexible. You can cancel with 30 days notice without penalties.",
+          answer: "Our contracts are flexible. You can cancel with 7 days notice without penalties.",
         },
         {
           question: "What size storage unit do I need?",
@@ -539,7 +539,7 @@ export const translations: Record<Language, Translations> = {
         },
         {
           question: "Can I change size later?",
-          answer: "Yes, our contracts are flexible. If you need more or less space, you can change size with 30 days notice.",
+          answer: "Yes, our contracts are flexible. If you need more or less space, you can change size without notice. We balance on the current month.",
         },
         {
           question: "What can't I store?",
@@ -623,8 +623,8 @@ export const translations: Record<Language, Translations> = {
         title: "Contact information",
         address: "Carrer Rosers 7, Ses Paisses",
         phone: "+34 675 330 148",
-        email: "trasterosibiza@gmail.com",
-        hours: "Monday to Sunday: 9:00 - 21:00",
+        email: "ibizatrasteros@gmail.com",
+        hours: "Monday to Sunday: 06:00 - 23:30",
       },
     },
     footer: {

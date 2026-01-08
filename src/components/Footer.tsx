@@ -41,7 +41,7 @@ export default function Footer() {
                 <a href="tel:+34675330148" className="hover:text-orange-600 transition-colors">{t.contact.info.phone}</a>
               </li>
               <li>
-                <a href="mailto:trasterosibiza@gmail.com" className="hover:text-orange-600 transition-colors">{t.contact.info.email}</a>
+                <a href="mailto:ibizatrasteros@gmail.com" className="hover:text-orange-600 transition-colors">{t.contact.info.email}</a>
               </li>
               <li>{t.contact.info.hours}</li>
             </ul>
