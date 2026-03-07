@@ -28,6 +28,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${baseUrl}/terminos`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/terminos`,
+          en: `${baseUrl}/terminos?lang=en`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/privacidad`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.4,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/privacidad`,
+          en: `${baseUrl}/privacidad?lang=en`,
+        },
+      },
+    },
   ]
 }
 

@@ -35,7 +35,7 @@ export default function Services() {
                 <f.icon className="w-6 h-6" />
               </div>
               <h3 className="mt-4 font-bold text-lg text-gray-900 group-hover:text-orange-700 transition-colors duration-300">{f.title}</h3>
-              <p className="mt-2 text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+              <p className="mt-2 text-gray-700 text-sm leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>

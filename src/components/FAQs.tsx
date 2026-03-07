@@ -16,9 +16,9 @@ export default function FAQs() {
             <details key={index} className="group rounded-xl border border-black/10 bg-white p-5 open:shadow-md transition">
               <summary className="cursor-pointer list-none font-medium flex items-center justify-between">
                 {faq.question}
-                <span className="ml-4 text-neutral-500 group-open:rotate-45 transition">+</span>
+                <span className="ml-4 text-gray-600 group-open:rotate-45 transition" aria-hidden="true">+</span>
               </summary>
-              <p className="mt-2 text-neutral-600 text-sm">{faq.answer}</p>
+              <p className="mt-2 text-gray-700 text-sm">{faq.answer}</p>
             </details>
           ))}
         </div>

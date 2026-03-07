@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     "alquiler trasteros ibiza",
     "trasteros baratos ibiza",
     "almacenamiento seguro ibiza",
-    "trasteros 24 horas ibiza"
   ],
   authors: [{ name: "Trasteros Ibiza" }],
   creator: "Trasteros Ibiza",
@@ -83,7 +82,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Agregar cuando tengas Google Search Console
+    // Añade aquí el código de verificación de Google Search Console cuando lo tengas
     // google: "tu-codigo-de-verificacion",
   },
 };
@@ -114,7 +113,7 @@ export default function RootLayout({
     },
     "url": "https://trasterosibiza.com",
     "telephone": "+34675330148",
-    "email": "ibizatrasteros@gmail.com",
+    "email": "info@trasteros-ibiza.com",
     "priceRange": "€€",
     "openingHoursSpecification": [
       {
@@ -165,6 +164,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${inter.variable} antialiased`}>
+        <a href="#main-content" className="skip-link">
+          Saltar al contenido
+        </a>
         <Script
           id="structured-data"
           type="application/ld+json"

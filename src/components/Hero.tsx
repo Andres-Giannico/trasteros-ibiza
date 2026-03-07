@@ -21,7 +21,7 @@ export default function Hero() {
                 {t.hero.titleHighlight}
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-neutral-600">
+            <p className="mt-6 max-w-xl text-lg text-gray-700">
               {t.hero.description}
             </p>
             <div className="mt-8 flex flex-wrap gap-3 items-center">
@@ -35,7 +35,7 @@ export default function Hero() {
                 {t.hero.ctaSecondary}
               </Button>
             </div>
-            <p className="mt-4 text-xs text-neutral-500">{t.hero.features}</p>
+            <p className="mt-4 text-xs text-gray-600">{t.hero.features}</p>
           </div>
           <div className="hidden lg:block">
             <HeroVisual />

@@ -19,7 +19,7 @@ export default function Stats() {
           {items.map((it) => (
             <div key={it.label} className="text-center">
               <div className="text-2xl font-extrabold tracking-tight">{it.value}</div>
-              <div className="mt-1 text-xs text-neutral-600">{it.label}</div>
+              <div className="mt-1 text-xs text-gray-700">{it.label}</div>
             </div>
           ))}
         </div>

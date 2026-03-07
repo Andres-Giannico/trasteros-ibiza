@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="font-bold text-gray-900 mb-4">Trasteros Ibiza</h3>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-700">
               {t.footer.description || "Tu espacio extra, simple y al instante."}
             </p>
           </div>
@@ -22,17 +22,17 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">{language === 'es' ? "Enlaces" : "Links"}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/#servicios" className="text-gray-600 hover:text-orange-600 transition-colors">{t.footer.links.services}</Link></li>
-              <li><Link href="/#ubicaciones" className="text-gray-600 hover:text-orange-600 transition-colors">{t.footer.links.locations}</Link></li>
-              <li><Link href="/#precios" className="text-gray-600 hover:text-orange-600 transition-colors">{t.footer.links.pricing}</Link></li>
-              <li><Link href="/disponibilidad" className="text-gray-600 hover:text-orange-600 transition-colors">{t.header.menu.availability}</Link></li>
+              <li><Link href="/#servicios" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.services}</Link></li>
+              <li><Link href="/#ubicaciones" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.locations}</Link></li>
+              <li><Link href="/#precios" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.pricing}</Link></li>
+              <li><Link href="/disponibilidad" className="text-gray-700 hover:text-orange-600 transition-colors">{t.header.menu.availability}</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">{t.contact.info.title}</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm text-gray-700">
               <li className="flex items-start gap-2">
                 <span>📍</span>
                 <span>{t.contact.info.address}</span>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <a href="tel:+34675330148" className="hover:text-orange-600 transition-colors">{t.contact.info.phone}</a>
               </li>
               <li>
-                <a href="mailto:ibizatrasteros@gmail.com" className="hover:text-orange-600 transition-colors">{t.contact.info.email}</a>
+                <a href="mailto:info@trasteros-ibiza.com" className="hover:text-orange-600 transition-colors">{t.contact.info.email}</a>
               </li>
               <li>{t.contact.info.hours}</li>
             </ul>
@@ -51,13 +51,13 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-600 hover:text-orange-600 transition-colors">{t.footer.legal.privacy}</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-orange-600 transition-colors">{t.footer.legal.terms}</a></li>
+              <li><Link href="/privacidad" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.legal.privacy}</Link></li>
+              <li><Link href="/terminos" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.legal.terms}</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+        <div className="pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-700">
           <p>{t.footer.copyright}</p>
           <p className="text-xs">Made with ❤️ in Ibiza by Pinchetron</p>
         </div>

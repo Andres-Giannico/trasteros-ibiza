@@ -2,6 +2,7 @@
 import Container from "@/components/ui/Container";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useState } from "react";
 
@@ -58,7 +59,7 @@ export default function Contact() {
             <div className="mt-8 space-y-4">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">{t.contact.info.title}</h3>
-                <div className="space-y-3 text-neutral-600">
+                <div className="space-y-3 text-gray-700">
                   <p className="flex items-start gap-2">
                     <span className="text-xl">📍</span>
                     <span>{t.contact.info.address}</span>
@@ -69,7 +70,7 @@ export default function Contact() {
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="text-xl">✉️</span>
-                    <a href="mailto:ibizatrasteros@gmail.com" className="hover:text-orange-500 transition-colors">{t.contact.info.email}</a>
+                    <a href="mailto:info@trasteros-ibiza.com" className="hover:text-orange-500 transition-colors">{t.contact.info.email}</a>
                   </p>
                   <p className="flex items-center gap-2">
                     <span className="text-xl">🕒</span>
@@ -92,6 +93,7 @@ export default function Contact() {
               </div>
               <input 
                 name="name"
+                autoComplete="name"
                 className="border border-gray-200 rounded-lg p-3 pl-10 w-full 
                            focus:ring-2 focus:ring-orange-500 focus:border-transparent
                            transition-all duration-200" 
@@ -107,6 +109,7 @@ export default function Contact() {
               </div>
               <input 
                 name="email"
+                autoComplete="email"
                 className="border border-gray-200 rounded-lg p-3 pl-10 w-full 
                            focus:ring-2 focus:ring-orange-500 focus:border-transparent
                            transition-all duration-200" 
@@ -123,6 +126,7 @@ export default function Contact() {
               </div>
               <input 
                 name="phone"
+                autoComplete="tel"
                 className="border border-gray-200 rounded-lg p-3 pl-10 w-full 
                            focus:ring-2 focus:ring-orange-500 focus:border-transparent
                            transition-all duration-200" 
@@ -146,9 +150,15 @@ export default function Contact() {
                 required 
               />
             </div>
+            <p className="text-sm text-gray-700">
+              {t.contact.form.privacyNotice}{' '}
+              <Link href="/privacidad" className="text-orange-600 hover:text-orange-700 underline">
+                {language === 'es' ? 'Política de Privacidad' : 'Privacy Policy'}
+              </Link>.
+            </p>
             {submitStatus === 'success' && (
               <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-                {language === 'es' ? '✓ Mensaje enviado correctamente. Te contactaremos pronto.' : '✓ Message sent successfully. We\'ll contact you soon.'}
+                {language === 'es' ? '✓ Mensaje enviado correctamente. Te responderemos lo antes posible.' : '✓ Message sent successfully. We\'ll get back to you as soon as possible.'}
               </div>
             )}
             {submitStatus === 'error' && (

@@ -49,7 +49,7 @@ export default function PersonalizedService() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{t.personalizedService.features.personal.title}</h3>
-                  <p className="text-gray-600 text-sm">{t.personalizedService.features.personal.description}</p>
+                  <p className="text-gray-700 text-sm">{t.personalizedService.features.personal.description}</p>
                 </div>
               </div>
 
@@ -61,7 +61,7 @@ export default function PersonalizedService() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{t.personalizedService.features.empathy.title}</h3>
-                  <p className="text-gray-600 text-sm">{t.personalizedService.features.empathy.description}</p>
+                  <p className="text-gray-700 text-sm">{t.personalizedService.features.empathy.description}</p>
                 </div>
               </div>
 
@@ -73,7 +73,7 @@ export default function PersonalizedService() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{t.personalizedService.features.dedicated.title}</h3>
-                  <p className="text-gray-600 text-sm">{t.personalizedService.features.dedicated.description}</p>
+                  <p className="text-gray-700 text-sm">{t.personalizedService.features.dedicated.description}</p>
                 </div>
               </div>
             </div>

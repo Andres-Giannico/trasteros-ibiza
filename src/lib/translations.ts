@@ -179,6 +179,7 @@ export interface Translations {
       phone: string;
       message: string;
       submit: string;
+      privacyNotice: string;
     };
     info: {
       title: string;
@@ -433,12 +434,13 @@ export const translations: Record<Language, Translations> = {
         phone: "Teléfono",
         message: "Mensaje",
         submit: "Enviar mensaje",
+        privacyNotice: "Al enviar aceptas nuestra",
       },
       info: {
         title: "Información de contacto",
         address: "Carrer Rosers 7, Ses Paisses",
         phone: "+34 675 330 148",
-        email: "ibizatrasteros@gmail.com",
+        email: "info@trasteros-ibiza.com",
         hours: "Lunes a Domingo: 06:00 - 23:30",
       },
     },
@@ -454,7 +456,7 @@ export const translations: Record<Language, Translations> = {
         privacy: "Política de privacidad",
         terms: "Términos y condiciones",
       },
-      copyright: "© 2024 Trasteros Ibiza. Todos los derechos reservados.",
+      copyright: "© 2025 Trasteros Ibiza. Todos los derechos reservados.",
     },
   },
   en: {
@@ -683,12 +685,13 @@ export const translations: Record<Language, Translations> = {
         phone: "Phone",
         message: "Message",
         submit: "Send message",
+        privacyNotice: "By submitting you accept our",
       },
       info: {
         title: "Contact information",
         address: "Carrer Rosers 7, Ses Paisses",
         phone: "+34 675 330 148",
-        email: "ibizatrasteros@gmail.com",
+        email: "info@trasteros-ibiza.com",
         hours: "Monday to Sunday: 06:00 - 23:30",
       },
     },
@@ -704,7 +707,7 @@ export const translations: Record<Language, Translations> = {
         privacy: "Privacy policy",
         terms: "Terms and conditions",
       },
-      copyright: "© 2024 Trasteros Ibiza. All rights reserved.",
+      copyright: "© 2025 Trasteros Ibiza. All rights reserved.",
     },
   },
 };

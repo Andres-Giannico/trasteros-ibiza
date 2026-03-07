@@ -38,7 +38,7 @@ export default function Testimonials() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-xs text-gray-500">{testimonial.date}</span>
+                <span className="text-xs text-gray-600">{testimonial.date}</span>
               </div>
 
               {/* Review Text */}
@@ -56,7 +56,7 @@ export default function Testimonials() {
                 <div>
                   <p className="font-semibold text-gray-900 text-sm">{testimonial.author}</p>
                   {testimonial.role && (
-                    <p className="text-xs text-gray-500">{testimonial.role}</p>
+                    <p className="text-xs text-gray-600">{testimonial.role}</p>
                   )}
                 </div>
               </div>

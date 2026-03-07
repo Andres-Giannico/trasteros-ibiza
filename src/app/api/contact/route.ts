@@ -84,7 +84,7 @@ Enviado desde el formulario de contacto de Trasteros Ibiza
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
           from: 'Trasteros Ibiza <onboarding@resend.dev>', // Cambiar cuando tengas dominio verificado
-          to: 'ibizatrasteros@gmail.com',
+          to: 'info@trasteros-ibiza.com',
           replyTo: email,
           subject: `Nuevo contacto: ${name}`,
           text: emailContentText,
@@ -95,7 +95,7 @@ Enviado desde el formulario de contacto de Trasteros Ibiza
         // Si falla Resend, logueamos pero no fallamos el request
         // para que el usuario vea el mensaje de éxito
         console.log('Email que se enviaría (fallback):', {
-          to: 'ibizatrasteros@gmail.com',
+          to: 'info@trasteros-ibiza.com',
           subject: `Nuevo contacto: ${name}`,
           text: emailContentText,
         });
@@ -103,7 +103,7 @@ Enviado desde el formulario de contacto de Trasteros Ibiza
     } else {
       // Fallback si no hay API key configurada
       console.log('RESEND_API_KEY no configurada. Email que se enviaría:', {
-        to: 'ibizatrasteros@gmail.com',
+        to: 'info@trasteros-ibiza.com',
         subject: `Nuevo contacto: ${name}`,
         text: emailContentText,
       });

@@ -32,7 +32,7 @@ export default function ClientArea() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{t.clientArea.features.doorControl.title}</h3>
-                  <p className="text-gray-600 text-sm">{t.clientArea.features.doorControl.description}</p>
+                  <p className="text-gray-700 text-sm">{t.clientArea.features.doorControl.description}</p>
                 </div>
               </div>
 
@@ -44,7 +44,7 @@ export default function ClientArea() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{t.clientArea.features.invoices.title}</h3>
-                  <p className="text-gray-600 text-sm">{t.clientArea.features.invoices.description}</p>
+                  <p className="text-gray-700 text-sm">{t.clientArea.features.invoices.description}</p>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ export default function ClientArea() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{t.clientArea.features.secure.title}</h3>
-                  <p className="text-gray-600 text-sm">{t.clientArea.features.secure.description}</p>
+                  <p className="text-gray-700 text-sm">{t.clientArea.features.secure.description}</p>
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ import ClientArea from "@/components/ClientArea";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-black">
+    <main id="main-content" className="min-h-screen bg-white text-black">
       <Header />
       <Hero />
       <TrustBadges />

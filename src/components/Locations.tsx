@@ -15,7 +15,7 @@ export default function Locations() {
           {t.locations.items.map((location, index) => (
             <div key={index} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <h3 className="font-semibold text-lg text-gray-900">{location.name}</h3>
-              <p className="mt-2 text-neutral-600 text-sm">{location.address}</p>
+              <p className="mt-2 text-gray-700 text-sm">{location.address}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {location.features.map((feature, i) => (
                   <span key={i} className="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-medium">

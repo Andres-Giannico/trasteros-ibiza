@@ -48,7 +48,7 @@ export default function WhyUs() {
               </div>
               
               <h3 className="mt-5 font-bold text-xl text-gray-900 group-hover:text-orange-700 transition-all duration-300 group-hover:translate-x-1">{b.title}</h3>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{b.desc}</p>
+              <p className="mt-3 text-gray-700 text-sm leading-relaxed group-hover:text-gray-800 transition-colors duration-300">{b.desc}</p>
               
               {/* Subtle background glow on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
