@@ -71,7 +71,7 @@ export default function Header() {
             )}
             <Link href="/disponibilidad" className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
             <a 
-              href="https://clientes.storagefy.app/es/Tras%20IBZ/customer/login" 
+              href="https://clientes.storagefy.app/es/TrasIBZ/customer/login" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-orange-500 text-orange-600 bg-white text-sm font-semibold hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-200 shadow-sm"
@@ -113,7 +113,7 @@ export default function Header() {
             )}
             <Link href="/disponibilidad" onClick={() => setOpen(false)} className="hover:text-black text-neutral-700 font-medium text-orange-600">{t.header.menu.availability}</Link>
             <a 
-              href="https://clientes.storagefy.app/es/Tras%20IBZ/customer/login" 
+              href="https://clientes.storagefy.app/es/TrasIBZ/customer/login" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

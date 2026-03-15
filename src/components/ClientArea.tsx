@@ -64,7 +64,7 @@ export default function ClientArea() {
             {/* CTA Button */}
             <div className="mt-8">
               <Button 
-                href="https://clientes.storagefy.app/es/Tras%20IBZ/customer/login" 
+                href="https://clientes.storagefy.app/es/TrasIBZ/customer/login" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-lg hover:shadow-xl text-white border-0"
