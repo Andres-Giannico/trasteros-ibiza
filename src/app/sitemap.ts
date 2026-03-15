@@ -17,6 +17,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${baseUrl}/storagefy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/storagefy`,
+          en: `${baseUrl}/storagefy?lang=en`,
+        },
+      },
+    },
+    {
       url: `${baseUrl}/disponibilidad`,
       lastModified: new Date(),
       changeFrequency: 'daily',

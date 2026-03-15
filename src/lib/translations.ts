@@ -190,15 +190,47 @@ export interface Translations {
     };
   };
   
-  // Footer
-  footer: {
-    description: string;
-    links: {
-      services: string;
-      locations: string;
-      pricing: string;
-      contact: string;
+  // Storagefy page
+  storagefy: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    whatIs: {
+      title: string;
+      description: string;
+      conclusion: string;
     };
+    automation: {
+      title: string;
+      description: string;
+      items: string[];
+    };
+    remote: {
+      title: string;
+      description: string;
+    };
+    benefits: {
+      title: string;
+      description: string;
+      items: string[];
+    };
+    cta: {
+      text: string;
+      button: string;
+    };
+    backLink: string;
+  };
+  
+  // Footer
+    footer: {
+      description: string;
+      links: {
+        services: string;
+        locations: string;
+        pricing: string;
+        contact: string;
+        storagefy: string;
+      };
     legal: {
       privacy: string;
       terms: string;
@@ -444,6 +476,46 @@ export const translations: Record<Language, Translations> = {
         hours: "Lunes a Domingo: 06:00 - 23:30",
       },
     },
+    storagefy: {
+      badge: "Sistema Automático",
+      title: "Cómo automatizamos todo con Storagefy",
+      subtitle: "Gestionamos nuestras dos ubicaciones en Ibiza de forma 100% automática. Sin necesidad de estar presentes en la isla. Reservas, pagos, acceso y facturación — todo desde el sistema.",
+      whatIs: {
+        title: "¿Qué es Storagefy?",
+        description: "Storagefy es una plataforma integral de gestión para empresas de almacenamiento. Nos permite centralizar reservas, pagos, control de acceso y facturación en un solo sistema. En Trasteros Ibiza lo usamos desde el primer día para ofrecer un servicio ágil y transparente.",
+        conclusion: " nos permite operar de forma profesional y escalable, ofreciendo a nuestros clientes la mejor experiencia posible.",
+      },
+      automation: {
+        title: "Automatización total",
+        description: "Todo el flujo está automatizado. Desde que un cliente reserva hasta que accede a su trastero:",
+        items: [
+          "Reserva online en tiempo real con disponibilidad actualizada al instante",
+          "Pago seguro integrado — sin gestiones manuales",
+          "Acceso 24/7 mediante app: el cliente abre la puerta desde su móvil",
+          "Facturación automática y área de cliente para consultar documentos",
+          "Gestión unificada de ambas ubicaciones (Sant Antoni y Ses Paisses) desde una sola plataforma",
+        ],
+      },
+      remote: {
+        title: "Gestión remota — sin estar en la isla",
+        description: "Gracias a Storagefy, podemos gestionar Trasteros Ibiza desde cualquier lugar. No necesitamos estar físicamente en la isla para que todo funcione: las reservas se procesan solas, los pagos se cobran automáticamente y los clientes acceden con su móvil. Esto nos permite ofrecer un servicio fiable y profesional durante todo el año.",
+      },
+      benefits: {
+        title: "Beneficios para el cliente",
+        description: "La automatización no es solo para nosotros. Nuestros clientes disfrutan de:",
+        items: [
+          "Reserva en 2 minutos, sin papeleos ni esperas",
+          "Acceso con el móvil — sin llaves físicas que perder",
+          "Facturas y pagos siempre disponibles en el área de cliente",
+          "Transparencia total: precios claros, sin sorpresas",
+        ],
+      },
+      cta: {
+        text: "Conoce más sobre la plataforma que usamos:",
+        button: "Ver disponibilidad",
+      },
+      backLink: "← Volver al inicio",
+    },
     footer: {
       description: "Tu espacio extra, simple y al instante. Trasteros modernos y seguros en Ibiza.",
       links: {
@@ -451,6 +523,7 @@ export const translations: Record<Language, Translations> = {
         locations: "Ubicaciones",
         pricing: "Precios",
         contact: "Contacto",
+        storagefy: "Sistema automático",
       },
       legal: {
         privacy: "Política de privacidad",
@@ -695,6 +768,46 @@ export const translations: Record<Language, Translations> = {
         hours: "Monday to Sunday: 06:00 - 23:30",
       },
     },
+    storagefy: {
+      badge: "Automatic System",
+      title: "How we automate everything with Storagefy",
+      subtitle: "We manage our two locations in Ibiza 100% automatically. No need to be physically on the island. Bookings, payments, access and invoicing — all from the system.",
+      whatIs: {
+        title: "What is Storagefy?",
+        description: "Storagefy is a comprehensive management platform for storage companies. It allows us to centralise bookings, payments, access control and invoicing in a single system. At Trasteros Ibiza we've used it from day one to offer an agile and transparent service.",
+        conclusion: " enables us to operate professionally and at scale, offering our customers the best possible experience.",
+      },
+      automation: {
+        title: "Full automation",
+        description: "The entire flow is automated. From when a customer books until they access their unit:",
+        items: [
+          "Real-time online booking with instantly updated availability",
+          "Integrated secure payment — no manual processing",
+          "24/7 access via app: customers open the door from their mobile",
+          "Automatic invoicing and customer area to check documents",
+          "Unified management of both locations (Sant Antoni and Ses Paisses) from a single platform",
+        ],
+      },
+      remote: {
+        title: "Remote management — without being on the island",
+        description: "Thanks to Storagefy, we can manage Trasteros Ibiza from anywhere. We don't need to be physically on the island for everything to work: bookings are processed automatically, payments are collected automatically and customers access with their mobile. This allows us to offer a reliable and professional service all year round.",
+      },
+      benefits: {
+        title: "Benefits for the customer",
+        description: "Automation isn't just for us. Our customers enjoy:",
+        items: [
+          "Book in 2 minutes, no paperwork or waiting",
+          "Mobile access — no physical keys to lose",
+          "Invoices and payments always available in the customer area",
+          "Full transparency: clear prices, no surprises",
+        ],
+      },
+      cta: {
+        text: "Find out more about the platform we use:",
+        button: "Check availability",
+      },
+      backLink: "← Back to home",
+    },
     footer: {
       description: "Your extra space, simple and instant. Modern and secure storage units in Ibiza.",
       links: {
@@ -702,6 +815,7 @@ export const translations: Record<Language, Translations> = {
         locations: "Locations",
         pricing: "Pricing",
         contact: "Contact",
+        storagefy: "Automatic system",
       },
       legal: {
         privacy: "Privacy policy",
