@@ -195,6 +195,7 @@ export interface Translations {
     badge: string;
     title: string;
     subtitle: string;
+    hook: string;
     whatIs: {
       title: string;
       description: string;
@@ -205,6 +206,20 @@ export interface Translations {
       description: string;
       items: string[];
     };
+    billingSteps: {
+      title: string;
+      subtitle: string;
+      steps: Array<{ title: string; description: string }>;
+    };
+    manualMistakes: {
+      title: string;
+      description: string;
+      items: string[];
+    };
+    caseStudy: {
+      title: string;
+      content: string;
+    };
     remote: {
       title: string;
       description: string;
@@ -213,6 +228,10 @@ export interface Translations {
       title: string;
       description: string;
       items: string[];
+    };
+    faq: {
+      title: string;
+      items: Array<{ question: string; answer: string }>;
     };
     cta: {
       text: string;
@@ -480,25 +499,49 @@ export const translations: Record<Language, Translations> = {
       badge: "Sistema Automático",
       title: "Cómo automatizamos todo con Storagefy",
       subtitle: "Gestionamos nuestras dos ubicaciones en Ibiza de forma 100% automática. Sin necesidad de estar presentes en la isla. Reservas, pagos, acceso y facturación — todo desde el sistema.",
+      hook: "La morosidad en trasteros suele superar el 30% cuando los cobros son manuales. Con facturación recurrente automatizada, nosotros la redujimos a menos del 10%. Así lo logramos.",
       whatIs: {
         title: "¿Qué es Storagefy?",
-        description: "Storagefy es una plataforma integral de gestión para empresas de almacenamiento. Nos permite centralizar reservas, pagos, control de acceso y facturación en un solo sistema. En Trasteros Ibiza lo usamos desde el primer día para ofrecer un servicio ágil y transparente.",
+        description: "Storagefy es un software SaaS de gestión para operadores de self storage y parkings. Permite automatizar cobros recurrentes con Stripe (tarjeta o SEPA Direct Debit), configurar ciclos de facturación mensuales, quincenales, trimestrales o semestrales, y centralizar reservas, control de acceso y facturación en un solo sistema. En Trasteros Ibiza lo usamos desde el primer día.",
         conclusion: " nos permite operar de forma profesional y escalable, ofreciendo a nuestros clientes la mejor experiencia posible.",
       },
       automation: {
-        title: "Automatización total",
+        title: "Automatización total del flujo operativo",
         description: "Todo el flujo está automatizado. Desde que un cliente reserva hasta que accede a su trastero:",
         items: [
           "Reserva online en tiempo real con disponibilidad actualizada al instante",
-          "Pago seguro integrado — sin gestiones manuales",
+          "Cobro recurrente automático vía tarjeta o SEPA — sin gestiones manuales",
           "Acceso 24/7 mediante app: el cliente abre la puerta desde su móvil",
           "Facturación automática y área de cliente para consultar documentos",
           "Gestión unificada de ambas ubicaciones (Sant Antoni y Ses Paisses) desde una sola plataforma",
         ],
       },
+      billingSteps: {
+        title: "Cómo funciona la facturación recurrente en la práctica",
+        subtitle: "Así opera el cobro automático en nuestro día a día:",
+        steps: [
+          { title: "Configuración del ciclo de cobro", description: "Definimos el ciclo (mensual, trimestral, etc.) y el método de pago. El cliente introduce sus datos una vez." },
+          { title: "Cobro automático en fecha", description: "El sistema intenta el cobro en la fecha programada. Si falla, envía recordatorios automáticos." },
+          { title: "Factura y acceso sin fricción", description: "El cliente recibe la factura por email y mantiene acceso a su trastero. Sin papeleos ni llamadas." },
+        ],
+      },
+      manualMistakes: {
+        title: "Errores habituales con facturación manual en trasteros",
+        description: "Muchos operadores de almacenamiento cometen estos fallos cuando cobran a mano:",
+        items: [
+          "Enviar recordatorios tarde o de forma inconsistente, lo que aumenta la morosidad",
+          "No tener links de pago 24/7 — el cliente quiere pagar pero no puede fuera del horario de oficina",
+          "Perder tiempo con Excel y hojas de cálculo que se desactualizan y generan errores",
+          "No integrar cobros con el control de acceso — pagos atrasados sin bloqueo automático",
+        ],
+      },
+      caseStudy: {
+        title: "Impacto operativo real",
+        content: "En Trasteros Ibiza pasamos de gestionar todo manualmente a un sistema automatizado con Storagefy. La ocupación subió del 52% al 82% en 5 meses gracias al widget de reservas 24/7. La morosidad bajó del 35% al 8% con recordatorios automáticos y cobros recurrentes. Ahorramos unas 15 horas semanales en tareas administrativas.",
+      },
       remote: {
         title: "Gestión remota — sin estar en la isla",
-        description: "Gracias a Storagefy, podemos gestionar Trasteros Ibiza desde cualquier lugar. No necesitamos estar físicamente en la isla para que todo funcione: las reservas se procesan solas, los pagos se cobran automáticamente y los clientes acceden con su móvil. Esto nos permite ofrecer un servicio fiable y profesional durante todo el año.",
+        description: "Gracias a Storagefy, podemos gestionar Trasteros Ibiza desde cualquier lugar. No necesitamos estar físicamente en la isla para que todo funcione: las reservas se procesan solas, los cobros recurrentes se ejecutan automáticamente y los clientes acceden con su móvil. Esto nos permite ofrecer un servicio fiable y profesional durante todo el año.",
       },
       benefits: {
         title: "Beneficios para el cliente",
@@ -508,6 +551,15 @@ export const translations: Record<Language, Translations> = {
           "Acceso con el móvil — sin llaves físicas que perder",
           "Facturas y pagos siempre disponibles en el área de cliente",
           "Transparencia total: precios claros, sin sorpresas",
+        ],
+      },
+      faq: {
+        title: "Preguntas frecuentes sobre automatización de trasteros",
+        items: [
+          { question: "¿Cómo automatizar cobros recurrentes en trasteros?", answer: "Puedes automatizar cobros recurrentes usando software de gestión como Storagefy integrado con Stripe. El cliente introduce sus datos de pago una vez y el sistema cobra automáticamente en cada ciclo (mensual, trimestral, etc.). Incluye recordatorios y links de pago 24/7." },
+          { question: "¿Qué software de facturación usar para self storage?", answer: "Para self storage conviene un software que integre reservas, cobros recurrentes, control de acceso y facturación. Plataformas como Storagefy ofrecen todo en uno con Stripe para tarjeta y SEPA Direct Debit, ciclos configurables y área de cliente." },
+          { question: "¿Cómo funciona el cobro automático con Stripe en almacenamiento?", answer: "Stripe permite cobros recurrentes mediante suscripción. El operador configura el ciclo de facturación y el cliente guarda su tarjeta o domiciliación SEPA. Stripe intenta el cobro en cada ciclo y gestiona reintentos y recordatorios automáticamente." },
+          { question: "¿Qué es la facturación recurrente SEPA para trasteros?", answer: "La facturación recurrente SEPA usa domiciliación bancaria para cobrar el alquiler automáticamente cada mes o en el ciclo acordado. El cliente autoriza el cargo una vez y el banco ejecuta los cobros posteriores sin intervención manual." },
         ],
       },
       cta: {
@@ -772,25 +824,49 @@ export const translations: Record<Language, Translations> = {
       badge: "Automatic System",
       title: "How we automate everything with Storagefy",
       subtitle: "We manage our two locations in Ibiza 100% automatically. No need to be physically on the island. Bookings, payments, access and invoicing — all from the system.",
+      hook: "Storage unit late payments often exceed 30% when billing is manual. With automated recurring billing, we reduced ours to under 10%. Here's how we did it.",
       whatIs: {
         title: "What is Storagefy?",
-        description: "Storagefy is a comprehensive management platform for storage companies. It allows us to centralise bookings, payments, access control and invoicing in a single system. At Trasteros Ibiza we've used it from day one to offer an agile and transparent service.",
+        description: "Storagefy is a SaaS management software for self storage and parking operators. It automates recurring payments via Stripe (card or SEPA Direct Debit), configurable billing cycles (monthly, bi-weekly, quarterly, semiannual), and centralises bookings, access control and invoicing in one system. At Trasteros Ibiza we've used it from day one.",
         conclusion: " enables us to operate professionally and at scale, offering our customers the best possible experience.",
       },
       automation: {
-        title: "Full automation",
+        title: "Full operational flow automation",
         description: "The entire flow is automated. From when a customer books until they access their unit:",
         items: [
           "Real-time online booking with instantly updated availability",
-          "Integrated secure payment — no manual processing",
+          "Automatic recurring payment via card or SEPA — no manual processing",
           "24/7 access via app: customers open the door from their mobile",
           "Automatic invoicing and customer area to check documents",
           "Unified management of both locations (Sant Antoni and Ses Paisses) from a single platform",
         ],
       },
+      billingSteps: {
+        title: "How recurring billing works in practice",
+        subtitle: "This is how automatic collection operates in our daily workflow:",
+        steps: [
+          { title: "Billing cycle configuration", description: "We set the cycle (monthly, quarterly, etc.) and payment method. The customer enters their details once." },
+          { title: "Automatic charge on due date", description: "The system attempts the charge on the scheduled date. If it fails, it sends automatic reminders." },
+          { title: "Invoice and frictionless access", description: "The customer receives the invoice by email and keeps access to their unit. No paperwork or admin calls." },
+        ],
+      },
+      manualMistakes: {
+        title: "Common mistakes with manual billing in storage",
+        description: "Many storage operators make these errors when billing manually:",
+        items: [
+          "Sending reminders late or inconsistently, which increases late payments",
+          "No 24/7 payment links — the customer wants to pay but can't outside office hours",
+          "Wasting time with Excel and spreadsheets that get outdated and cause errors",
+          "Not integrating payments with access control — late payments without automatic blocking",
+        ],
+      },
+      caseStudy: {
+        title: "Real operational impact",
+        content: "At Trasteros Ibiza we went from managing everything manually to an automated system with Storagefy. Occupancy rose from 52% to 82% in 5 months thanks to the 24/7 booking widget. Late payments dropped from 35% to 8% with automatic reminders and recurring billing. We save around 15 hours per week on admin tasks.",
+      },
       remote: {
         title: "Remote management — without being on the island",
-        description: "Thanks to Storagefy, we can manage Trasteros Ibiza from anywhere. We don't need to be physically on the island for everything to work: bookings are processed automatically, payments are collected automatically and customers access with their mobile. This allows us to offer a reliable and professional service all year round.",
+        description: "Thanks to Storagefy, we can manage Trasteros Ibiza from anywhere. We don't need to be physically on the island for everything to work: bookings are processed automatically, recurring payments run automatically and customers access with their mobile. This allows us to offer a reliable and professional service all year round.",
       },
       benefits: {
         title: "Benefits for the customer",
@@ -800,6 +876,15 @@ export const translations: Record<Language, Translations> = {
           "Mobile access — no physical keys to lose",
           "Invoices and payments always available in the customer area",
           "Full transparency: clear prices, no surprises",
+        ],
+      },
+      faq: {
+        title: "Frequently asked questions about storage automation",
+        items: [
+          { question: "How to automate recurring payments in storage units?", answer: "You can automate recurring payments using management software like Storagefy integrated with Stripe. The customer enters their payment details once and the system charges automatically each cycle (monthly, quarterly, etc.). It includes reminders and 24/7 payment links." },
+          { question: "What billing software to use for self storage?", answer: "For self storage, choose software that integrates bookings, recurring payments, access control and invoicing. Platforms like Storagefy offer everything in one with Stripe for card and SEPA Direct Debit, configurable cycles and a customer portal." },
+          { question: "How does automatic Stripe billing work for storage?", answer: "Stripe enables recurring payments via subscription. The operator configures the billing cycle and the customer saves their card or SEPA mandate. Stripe attempts the charge each cycle and handles retries and reminders automatically." },
+          { question: "What is recurring SEPA billing for storage units?", answer: "Recurring SEPA billing uses bank direct debit to collect rent automatically each month or in the agreed cycle. The customer authorises the charge once and the bank executes subsequent charges without manual intervention." },
         ],
       },
       cta: {

@@ -20,8 +20,11 @@ export default function StoragefyPage() {
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 mb-6">
               {t.storagefy.title}
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
               {t.storagefy.subtitle}
+            </p>
+            <p className="text-base text-gray-600 font-medium max-w-2xl mx-auto">
+              {t.storagefy.hook}
             </p>
           </div>
         </Container>
@@ -74,6 +77,54 @@ export default function StoragefyPage() {
               </ul>
             </div>
 
+            {/* Cómo funciona facturación recurrente */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                {t.storagefy.billingSteps.title}
+              </h2>
+              <p className="text-gray-700 mb-6">{t.storagefy.billingSteps.subtitle}</p>
+              <ol className="space-y-6">
+                {t.storagefy.billingSteps.steps.map((step, i) => (
+                  <li key={i}>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      {i + 1}. {step.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm">{step.description}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Errores facturación manual */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                {t.storagefy.manualMistakes.title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {t.storagefy.manualMistakes.description}
+              </p>
+              <ul className="space-y-3">
+                {t.storagefy.manualMistakes.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5 text-red-600 font-bold text-sm">
+                      ×
+                    </span>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Mini case study */}
+            <div className="rounded-xl bg-orange-50 border border-orange-100 p-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                {t.storagefy.caseStudy.title}
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                {t.storagefy.caseStudy.content}
+              </p>
+            </div>
+
             {/* Gestión remota */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -104,6 +155,21 @@ export default function StoragefyPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* FAQ */}
+            <div className="border-t border-gray-200 pt-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                {t.storagefy.faq.title}
+              </h2>
+              <dl className="space-y-6">
+                {t.storagefy.faq.items.map((item, i) => (
+                  <div key={i} className="border-b border-gray-100 pb-6 last:border-0">
+                    <dt className="font-semibold text-gray-900 mb-2">{item.question}</dt>
+                    <dd className="text-gray-700 text-sm leading-relaxed">{item.answer}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
 
             {/* CTA */}
