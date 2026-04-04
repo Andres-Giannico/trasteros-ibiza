@@ -29,6 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${baseUrl}/plano-ses-paisses`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/plano-ses-paisses`,
+          en: `${baseUrl}/plano-ses-paisses?lang=en`,
+        },
+      },
+    },
+    {
       url: `${baseUrl}/disponibilidad`,
       lastModified: new Date(),
       changeFrequency: 'daily',

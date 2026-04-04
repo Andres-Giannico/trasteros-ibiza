@@ -64,6 +64,7 @@ export interface Translations {
       name: string;
       address: string;
       features: string[];
+      links?: Array<{ label: string; href: string }>;
     }>;
   };
   
@@ -103,6 +104,7 @@ export interface Translations {
   widget: {
     title: string;
     description: string;
+    floorPlanLink: string;
   };
   
   // CTA
@@ -239,6 +241,13 @@ export interface Translations {
     };
     backLink: string;
   };
+
+  // Floor plan Ses Paisses page
+  floorPlanSesPaisses: {
+    title: string;
+    description: string;
+    backToAvailability: string;
+  };
   
   // Footer
     footer: {
@@ -249,6 +258,7 @@ export interface Translations {
         pricing: string;
         contact: string;
         storagefy: string;
+        floorPlanSesPaisses: string;
       };
     legal: {
       privacy: string;
@@ -338,6 +348,10 @@ export const translations: Record<Language, Translations> = {
           name: "Ses Paisses",
           address: "Carrer Rosers 7, Ses Paisses 07820",
           features: ["Carga descarga", "A las afueras del Pueblo de San Antonio", "Acceso 7/7 (06:00-23:30)", "Alarma", "Camaras de Seguridad"],
+          links: [
+            { label: "Ver plano interactivo", href: "/plano-ses-paisses" },
+            { label: "Ver disponibilidad", href: "/disponibilidad" },
+          ],
         },
       ],
     },
@@ -358,6 +372,7 @@ export const translations: Record<Language, Translations> = {
     widget: {
       title: "Disponibilidad en Tiempo Real",
       description: "Consulta nuestros trasteros disponibles según tamaño y reserva online directamente desde el widget. Disponibilidad actualizada en tiempo real.",
+      floorPlanLink: "Ver plano interactivo (Ses Paisses)",
     },
     
     faqs: {
@@ -568,6 +583,11 @@ export const translations: Record<Language, Translations> = {
       },
       backLink: "← Volver al inicio",
     },
+    floorPlanSesPaisses: {
+      title: "Plano interactivo — Ses Paisses",
+      description: "Consulta la disposición de las unidades en tiempo real. Haz clic en cada espacio para ver disponibilidad y detalles.",
+      backToAvailability: "← Ver disponibilidad y reservar",
+    },
     footer: {
       description: "Tu espacio extra, simple y al instante. Trasteros modernos y seguros en Ibiza.",
       links: {
@@ -576,6 +596,7 @@ export const translations: Record<Language, Translations> = {
         pricing: "Precios",
         contact: "Contacto",
         storagefy: "Sistema automático",
+        floorPlanSesPaisses: "Plano Ses Paisses",
       },
       legal: {
         privacy: "Política de privacidad",
@@ -663,6 +684,10 @@ export const translations: Record<Language, Translations> = {
           name: "Ses Paisses",
           address: "Carrer Rosers 7, Ses Paisses 07820",
           features: ["Loading and unloading", "Outside San Antonio Town", "7/7 Access (06:00-23:30)", "Alarm", "Security Cameras"],
+          links: [
+            { label: "Interactive floor plan", href: "/plano-ses-paisses" },
+            { label: "Check availability", href: "/disponibilidad" },
+          ],
         },
       ],
     },
@@ -683,6 +708,7 @@ export const translations: Record<Language, Translations> = {
     widget: {
       title: "Real-Time Availability",
       description: "Check our available storage units by size and book online directly from the widget. Real-time updated availability.",
+      floorPlanLink: "Interactive floor plan (Ses Paisses)",
     },
     
     faqs: {
@@ -893,6 +919,11 @@ export const translations: Record<Language, Translations> = {
       },
       backLink: "← Back to home",
     },
+    floorPlanSesPaisses: {
+      title: "Interactive floor plan — Ses Paisses",
+      description: "See unit layout in real time. Tap each space for availability and details.",
+      backToAvailability: "← Check availability and book",
+    },
     footer: {
       description: "Your extra space, simple and instant. Modern and secure storage units in Ibiza.",
       links: {
@@ -901,6 +932,7 @@ export const translations: Record<Language, Translations> = {
         pricing: "Pricing",
         contact: "Contact",
         storagefy: "Automatic system",
+        floorPlanSesPaisses: "Ses Paisses floor plan",
       },
       legal: {
         privacy: "Privacy policy",

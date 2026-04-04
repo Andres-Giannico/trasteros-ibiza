@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -23,6 +24,19 @@ export default function Locations() {
                   </span>
                 ))}
               </div>
+              {location.links && location.links.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm border-t border-gray-100 pt-4">
+                  {location.links.map((link, li) => (
+                    <Link
+                      key={li}
+                      href={link.href}
+                      className="font-semibold text-orange-600 hover:text-orange-700 underline underline-offset-2"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

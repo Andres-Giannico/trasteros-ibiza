@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from "react";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -56,6 +57,14 @@ export default function DisponibilidadPage() {
                 {t.hero?.features?.split('✓')[3]?.trim() || "Seguro incluido"}
               </span>
             </div>
+            <p className="mt-10">
+              <Link
+                href="/plano-ses-paisses"
+                className="text-orange-600 hover:text-orange-700 font-semibold underline underline-offset-2"
+              >
+                {t.widget.floorPlanLink}
+              </Link>
+            </p>
           </div>
         </Container>
       </section>
