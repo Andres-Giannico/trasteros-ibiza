@@ -27,6 +27,7 @@ export default function PlanoSesPaissesPage() {
     script.setAttribute("data-location-id", FLOOR_PLAN_LOCATION_ID);
     script.setAttribute("data-base-url", "https://www.storagefy.app");
     script.setAttribute("data-only-map", "true");
+    script.setAttribute("data-tooltip-only-available", "true");
     document.body.appendChild(script);
   }, []);
 
