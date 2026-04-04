@@ -1,28 +1,34 @@
 'use client'
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import Container from "@/components/ui/Container";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { useLanguage } from "@/hooks/useLanguage";
 
+const WIDGET_SCRIPT = "https://www.storagefy.app/widget/widget.js";
+const WIDGET_CSS = "https://www.storagefy.app/widget/widget.css";
+
 export default function StorageWidget() {
   const { t } = useLanguage();
 
-  useEffect(() => {
-    // Cargar el script del widget si no está ya cargado
-    const existingScript = document.querySelector('script[src="https://www.storagefy.app/widget/widget.js"]');
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = 'https://www.storagefy.app/widget/widget.js';
-      script.async = true;
-      document.body.appendChild(script);
+  useLayoutEffect(() => {
+    document.querySelectorAll(`script[src="${WIDGET_SCRIPT}"]`).forEach((el) => el.remove());
 
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://www.storagefy.app/widget/widget.css';
+    const script = document.createElement("script");
+    script.src = WIDGET_SCRIPT;
+    script.async = true;
+    document.body.appendChild(script);
+
+    if (!document.querySelector(`link[href="${WIDGET_CSS}"]`)) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = WIDGET_CSS;
       document.head.appendChild(link);
     }
+
+    return () => {
+      script.remove();
+    };
   }, []);
 
   return (

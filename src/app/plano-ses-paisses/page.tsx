@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import Container from "@/components/ui/Container";
 import { useLanguage } from "@/hooks/useLanguage";
 import Link from "next/link";
@@ -14,11 +14,10 @@ const FLOOR_PLAN_LOCATION_ID = "cmgnvcy7r0001jm04rx3g8iz3";
 export default function PlanoSesPaissesPage() {
   const { t } = useLanguage();
 
-  useEffect(() => {
-    const existing = document.querySelector(
-      `script[src="${FLOOR_PLAN_SCRIPT_SRC}"]`
-    );
-    if (existing) return;
+  useLayoutEffect(() => {
+    document
+      .querySelectorAll(`script[src="${FLOOR_PLAN_SCRIPT_SRC}"]`)
+      .forEach((el) => el.remove());
 
     const script = document.createElement("script");
     script.src = FLOOR_PLAN_SCRIPT_SRC;
@@ -29,6 +28,10 @@ export default function PlanoSesPaissesPage() {
     script.setAttribute("data-only-map", "true");
     script.setAttribute("data-tooltip-only-available", "true");
     document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
   }, []);
 
   return (
