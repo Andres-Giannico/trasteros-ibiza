@@ -34,11 +34,11 @@ export default function PlanoSanAntoniPage() {
       </section>
 
       <section className="pb-16 sm:pb-20">
-        <Container>
+        <div className="mx-auto max-w-3xl px-6">
           <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-visible">
             <StorageFloorPlanEmbed locationId={SAN_ANTONI_LOCATION_ID} />
           </div>
-        </Container>
+        </div>
       </section>
     </div>
   );
