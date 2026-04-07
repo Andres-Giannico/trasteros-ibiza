@@ -105,6 +105,7 @@ export interface Translations {
     title: string;
     description: string;
     floorPlanLink: string;
+    floorPlanLinkSanAntoni: string;
   };
   
   // CTA
@@ -248,6 +249,13 @@ export interface Translations {
     description: string;
     backToAvailability: string;
   };
+
+  // Floor plan Sant Antoni page
+  floorPlanSanAntoni: {
+    title: string;
+    description: string;
+    backToAvailability: string;
+  };
   
   // Footer
     footer: {
@@ -259,6 +267,7 @@ export interface Translations {
         contact: string;
         storagefy: string;
         floorPlanSesPaisses: string;
+        floorPlanSanAntoni: string;
       };
     legal: {
       privacy: string;
@@ -343,6 +352,10 @@ export const translations: Record<Language, Translations> = {
           name: "Sant Antoni de Portmany",
           address: "Calle Menendes Pidal 28, Sant Antoni de Portmany 07820",
           features: ["Carga descarga", "Dentro del Pueblo de San Antonio", "Acceso 7/7 (06:00-23:30)", "Alarma", "Camaras de Seguridad"],
+          links: [
+            { label: "Ver plano interactivo", href: "/plano-san-antoni" },
+            { label: "Ver disponibilidad", href: "/disponibilidad" },
+          ],
         },
         {
           name: "Ses Paisses",
@@ -373,6 +386,7 @@ export const translations: Record<Language, Translations> = {
       title: "Disponibilidad en Tiempo Real",
       description: "Consulta nuestros trasteros disponibles según tamaño y reserva online directamente desde el widget. Disponibilidad actualizada en tiempo real.",
       floorPlanLink: "Ver plano interactivo (Ses Paisses)",
+      floorPlanLinkSanAntoni: "Ver plano interactivo (Sant Antoni)",
     },
     
     faqs: {
@@ -588,6 +602,11 @@ export const translations: Record<Language, Translations> = {
       description: "Consulta la disposición de las unidades en tiempo real. Haz clic en cada espacio para ver disponibilidad y detalles.",
       backToAvailability: "← Ver disponibilidad y reservar",
     },
+    floorPlanSanAntoni: {
+      title: "Plano interactivo — Sant Antoni",
+      description: "Consulta la disposición de las unidades en tiempo real. Haz clic en cada espacio para ver disponibilidad y detalles.",
+      backToAvailability: "← Ver disponibilidad y reservar",
+    },
     footer: {
       description: "Tu espacio extra, simple y al instante. Trasteros modernos y seguros en Ibiza.",
       links: {
@@ -597,6 +616,7 @@ export const translations: Record<Language, Translations> = {
         contact: "Contacto",
         storagefy: "Sistema automático",
         floorPlanSesPaisses: "Plano Ses Paisses",
+        floorPlanSanAntoni: "Plano Sant Antoni",
       },
       legal: {
         privacy: "Política de privacidad",
@@ -679,6 +699,10 @@ export const translations: Record<Language, Translations> = {
           name: "Sant Antoni de Portmany",
           address: "Calle Menendes Pidal 28, Sant Antoni de Portmany 07820",
           features: ["Loading and unloading", "Inside San Antonio Town", "7/7 Access (06:00-23:30)", "Alarm", "Security Cameras"],
+          links: [
+            { label: "Interactive floor plan", href: "/plano-san-antoni" },
+            { label: "Check availability", href: "/disponibilidad" },
+          ],
         },
         {
           name: "Ses Paisses",
@@ -709,6 +733,7 @@ export const translations: Record<Language, Translations> = {
       title: "Real-Time Availability",
       description: "Check our available storage units by size and book online directly from the widget. Real-time updated availability.",
       floorPlanLink: "Interactive floor plan (Ses Paisses)",
+      floorPlanLinkSanAntoni: "Interactive floor plan (Sant Antoni)",
     },
     
     faqs: {
@@ -924,6 +949,11 @@ export const translations: Record<Language, Translations> = {
       description: "See unit layout in real time. Tap each space for availability and details.",
       backToAvailability: "← Check availability and book",
     },
+    floorPlanSanAntoni: {
+      title: "Interactive floor plan — Sant Antoni",
+      description: "See unit layout in real time. Tap each space for availability and details.",
+      backToAvailability: "← Check availability and book",
+    },
     footer: {
       description: "Your extra space, simple and instant. Modern and secure storage units in Ibiza.",
       links: {
@@ -933,6 +963,7 @@ export const translations: Record<Language, Translations> = {
         contact: "Contact",
         storagefy: "Automatic system",
         floorPlanSesPaisses: "Ses Paisses floor plan",
+        floorPlanSanAntoni: "Sant Antoni floor plan",
       },
       legal: {
         privacy: "Privacy policy",

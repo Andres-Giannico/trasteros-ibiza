@@ -65,14 +65,20 @@ export default function DisponibilidadPage() {
                 {t.hero?.features?.split('✓')[3]?.trim() || "Seguro incluido"}
               </span>
             </div>
-            <p className="mt-10">
+            <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3">
+              <Link
+                href="/plano-san-antoni"
+                className="text-orange-600 hover:text-orange-700 font-semibold underline underline-offset-2"
+              >
+                {t.widget.floorPlanLinkSanAntoni}
+              </Link>
               <Link
                 href="/plano-ses-paisses"
                 className="text-orange-600 hover:text-orange-700 font-semibold underline underline-offset-2"
               >
                 {t.widget.floorPlanLink}
               </Link>
-            </p>
+            </div>
           </div>
         </Container>
       </section>

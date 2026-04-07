@@ -41,6 +41,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${baseUrl}/plano-san-antoni`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.75,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/plano-san-antoni`,
+          en: `${baseUrl}/plano-san-antoni?lang=en`,
+        },
+      },
+    },
+    {
       url: `${baseUrl}/disponibilidad`,
       lastModified: new Date(),
       changeFrequency: 'daily',

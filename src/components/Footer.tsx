@@ -27,6 +27,7 @@ export default function Footer() {
               <li><Link href="/#precios" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.pricing}</Link></li>
               <li><Link href="/disponibilidad" className="text-gray-700 hover:text-orange-600 transition-colors">{t.header.menu.availability}</Link></li>
               <li><Link href="/plano-ses-paisses" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.floorPlanSesPaisses}</Link></li>
+              <li><Link href="/plano-san-antoni" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.floorPlanSanAntoni}</Link></li>
               <li><Link href="/storagefy" className="text-gray-700 hover:text-orange-600 transition-colors">{t.footer.links.storagefy}</Link></li>
             </ul>
           </div>

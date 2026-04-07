@@ -5,9 +5,9 @@ import { useLanguage } from "@/hooks/useLanguage";
 import Link from "next/link";
 import StorageFloorPlanEmbed from "@/components/StorageFloorPlanEmbed";
 
-const SES_PAISSES_LOCATION_ID = "cmgnvcy7r0001jm04rx3g8iz3";
+const SAN_ANTONI_LOCATION_ID = "cmgp72y600001js04h94i55cp";
 
-export default function PlanoSesPaissesPage() {
+export default function PlanoSanAntoniPage() {
   const { t } = useLanguage();
 
   return (
@@ -16,17 +16,17 @@ export default function PlanoSesPaissesPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
-              {t.floorPlanSesPaisses.title}
+              {t.floorPlanSanAntoni.title}
             </h1>
             <p className="mt-4 text-lg text-gray-700">
-              {t.floorPlanSesPaisses.description}
+              {t.floorPlanSanAntoni.description}
             </p>
             <p className="mt-6">
               <Link
                 href="/disponibilidad"
                 className="text-orange-600 hover:text-orange-700 font-medium text-sm"
               >
-                {t.floorPlanSesPaisses.backToAvailability}
+                {t.floorPlanSanAntoni.backToAvailability}
               </Link>
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function PlanoSesPaissesPage() {
       <section className="pb-16 sm:pb-20">
         <Container>
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-            <StorageFloorPlanEmbed locationId={SES_PAISSES_LOCATION_ID} />
+            <StorageFloorPlanEmbed locationId={SAN_ANTONI_LOCATION_ID} />
           </div>
         </Container>
       </section>
