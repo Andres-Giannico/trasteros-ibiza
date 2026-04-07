@@ -35,7 +35,7 @@ export default function PlanoSesPaissesPage() {
 
       <section className="pb-16 sm:pb-20">
         <Container>
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-visible">
             <StorageFloorPlanEmbed locationId={SES_PAISSES_LOCATION_ID} />
           </div>
         </Container>

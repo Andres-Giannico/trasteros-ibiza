@@ -13,7 +13,6 @@ type Props = {
 
 export default function StorageFloorPlanEmbed({ locationId }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  /** Invalida renders del widget si el efecto se re-ejecuta (p. ej. Strict Mode) antes de que termine de cargar el script. */
   const loadGenerationRef = useRef(0);
 
   useLayoutEffect(() => {
@@ -21,36 +20,37 @@ export default function StorageFloorPlanEmbed({ locationId }: Props) {
     if (!el) return;
 
     loadGenerationRef.current += 1;
-    const loadToken = loadGenerationRef.current;
 
     el.innerHTML = "";
+
+    // Copia de credenciales en el contenedor (el embed puede leerlas aquí)
+    el.setAttribute("data-token", FLOOR_PLAN_TOKEN);
+    el.setAttribute("data-location-id", locationId);
+    el.setAttribute("data-base-url", "https://www.storagefy.app");
+
     document
       .querySelectorAll(`script[src="${FLOOR_PLAN_SCRIPT_SRC}"]`)
       .forEach((node) => node.remove());
 
     const script = document.createElement("script");
-    script.src = FLOOR_PLAN_SCRIPT_SRC;
-    script.async = true;
+    // Scripts dinámicos con async=true dejan document.currentScript === null y el embed pierde data-*
+    script.async = false;
     script.setAttribute("data-token", FLOOR_PLAN_TOKEN);
     script.setAttribute("data-location-id", locationId);
     script.setAttribute("data-base-url", "https://www.storagefy.app");
     script.setAttribute("data-only-map", "true");
     script.setAttribute("data-tooltip-only-available", "true");
-
-    const onLoad = () => {
-      if (loadToken !== loadGenerationRef.current) {
-        el.innerHTML = "";
-      }
-    };
-    script.addEventListener("load", onLoad);
+    script.src = FLOOR_PLAN_SCRIPT_SRC;
 
     document.body.appendChild(script);
 
     return () => {
       loadGenerationRef.current += 1;
-      script.removeEventListener("load", onLoad);
       script.remove();
       el.innerHTML = "";
+      el.removeAttribute("data-token");
+      el.removeAttribute("data-location-id");
+      el.removeAttribute("data-base-url");
     };
   }, [locationId]);
 
@@ -58,7 +58,7 @@ export default function StorageFloorPlanEmbed({ locationId }: Props) {
     <div
       ref={containerRef}
       id="storagefy-floor-plan"
-      className="min-h-[520px] w-full"
+      className="storagefy-floor-plan-root w-full min-h-[480px] overflow-visible"
       aria-label="Plano interactivo Storagefy"
     />
   );

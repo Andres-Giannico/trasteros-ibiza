@@ -210,3 +210,20 @@ html {
   box-shadow: 0 0 0 2px var(--brand-600);
   outline: none;
 }
+
+/* Storagefy floor plan: altura completa (evita iframe recortado) */
+.storagefy-floor-plan-root {
+  display: block;
+}
+
+.storagefy-floor-plan-root iframe {
+  width: 100% !important;
+  min-height: 72vh !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+.storagefy-floor-plan-root svg {
+  max-height: none !important;
+  height: auto !important;
+}
